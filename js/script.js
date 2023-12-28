@@ -15,12 +15,12 @@ function emailValidate() {
 
 function passValidate() {
     if(this.value.length < 8) {
-        this.classList.add('input--error');
         alert("Heslo musí být alespoň 8 znaků dlouhé.");
-    } else {
-        this.classList.remove('input--error');
-    }
-}
+        this.classList.add('input--error');}
+    }// else {
+//         this.classList.remove('input--error');
+//     }
+// }
 
 function pass2Validate() {
     if(this.value !== inputPassword.value) {

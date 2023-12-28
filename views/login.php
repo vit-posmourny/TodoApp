@@ -7,8 +7,6 @@
     
     <main  class="container--center">
         
-        <div class="modal-overlay">
-            
             <form action="" class="form" >
                 <h1 class="form__headline">Přihlásit se</h1>
                 <input id="input_email" type="text" placeholder="Email">
@@ -18,8 +16,6 @@
                     <p>Nemáte účet? <a href="register.php">Vytvořte si ho</a></p>
                 </div>
             </form>
-            
-        </div>
         
     </main>
     

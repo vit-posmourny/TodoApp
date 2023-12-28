@@ -58,7 +58,7 @@
 
     </main>
 
-    <div class="modal-overlay-new-todo">
+    <div class="modal-overlay">
         
         <form action="login.php" class="form" >
             <h1 class="form__headline">Nový úkol</h1>
@@ -69,7 +69,7 @@
         
     </div>
     
-    <script type="text/javascript" src="../js/modal-new-todo.js"></script>
+    <script type="text/javascript" src="../js/modal.js"></script>
 
 </body>
 

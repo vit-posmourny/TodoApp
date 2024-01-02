@@ -3,27 +3,26 @@
     <title>Login</title>
 <head>
     
-    <?php
-    
-    $error = $_GET['error'];
-    
-    $errors = [
-        
-        'wrong_credentials' => 'špatně zadané údaje',
+<?php
+
+    $error = $_GET['error'] ?? 'Nemám email';
+    $errors =
+    [
+        'wrong_credentials' => 'Špatné přihlašovací údaje',
     ];
     
-    echo "Chyba: ".$errors[$error]."<br>";
-    ?>
-    
+    if (isset($error))
+    {
+        echo "Chyba: ".$error."<br>";
+    }
+?>
+<p id="test"><p>
+
 <body >
     
     <main  class="container--center">
-        
-        <p id="test" style="text-decoration-color: #e4e4e4"></p>
-        
- 
-        
-        <form id="id_form" action="" class="form" name="name_form" method="post">
+
+        <form id="id_login" action="" class="form" name="name_form" method="post">
             <h1 class="form__headline">Přihlásit se</h1>
             <input id="id_input_email" name="name_email" type="text" placeholder="Email">
             <input id="id_input_pass" name="name_pass" type="text" placeholder="Heslo">
@@ -34,9 +33,9 @@
         </form>
         
     </main>
-    <script type="text/javascript" src="../js/script.js"></script>
-  
 
+    <script type="text/javascript" src="../js/script_login.js"></script>
+  
 </body>
 
 </html>

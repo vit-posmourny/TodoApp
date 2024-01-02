@@ -1,5 +1,4 @@
 <?php include "partials/header.php"; ?>
-<?php //include "../controllers/checkUserInDatabase.php"; ?>
 
     <title>Register</title>
 </head>
@@ -8,7 +7,7 @@
 
     <main class="container--center">
         
-        <form action="" class="form" name="name_form" method="post">
+        <form id="id_register" action="" class="form" name="name_form" method="post">
             <h1 class="form__headline">Registrace</h1>
             <input id="id_input_email" type="text" name="name_email" placeholder="Email" >
             <input id="id_input_pass" type="text" name="name_pass" placeholder="Heslo">
@@ -21,7 +20,7 @@
         
     </main>
 
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/script_register.js"></script>
 
 </body>
 

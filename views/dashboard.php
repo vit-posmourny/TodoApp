@@ -60,7 +60,7 @@
 
     <div class="modal-overlay">
         
-        <form action="login.php" class="form" >
+        <form action="index.php" class="form" >
             <h1 class="form__headline">Nový úkol</h1>
             <input id="todo_input" type="text">
             <input type="text">

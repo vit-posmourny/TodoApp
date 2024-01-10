@@ -17,7 +17,6 @@ function checkAllStates() {
     
     if (emailValidState && passValidState)
     {
-        document.getElementById("test").innerHTML = 'byl tu check all states <br>';
         login.action = "../controllers/checkUserInDatabase.php";
 
     } else {

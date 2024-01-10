@@ -1,7 +1,4 @@
-<?php include "partials/header.php"; ?>
-
-    <title>Dashboard</title>
-</head>
+<?php include __DIR__."/partials/header.php"; ?>
 
 <body>
 
@@ -60,7 +57,7 @@
 
     <div class="modal-overlay">
         
-        <form action="index.php" class="form" >
+        <form action="./views/login.php" class="form" >
             <h1 class="form__headline">Nový úkol</h1>
             <input id="todo_input" type="text">
             <input type="text">
@@ -69,7 +66,7 @@
         
     </div>
     
-    <script type="text/javascript" src="../js/modal.js"></script>
+    <script type="text/javascript"><?php include __DIR__."/js/modal.js"?></script>
 
 </body>
 

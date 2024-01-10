@@ -1,10 +1,5 @@
-<?php include "partials/header.php"; ?>
-
-    <title>Login</title>
-<head>
+<?php include __DIR__."/partials/header.php";
     
-<?php
-
     $error = $_GET['error'] ?? 'Nemám email';
     $errors =
     [
@@ -22,7 +17,7 @@
     
     <main  class="container--center">
 
-        <form id="id_login" action="" class="form" name="name_form" method="post">
+        <form id="id_login" action="../controllers/checkUserInDatabase.php" class="form" name="name_form" method="post">
             <h1 class="form__headline">Přihlásit se</h1>
             <input id="id_input_email" name="name_email" type="text" placeholder="Email">
             <input id="id_input_pass" name="name_pass" type="text" placeholder="Heslo">
@@ -34,7 +29,7 @@
         
     </main>
 
-    <script type="text/javascript" src="../js/script_login.js"></script>
+    <script type="text/javascript"><?php include __DIR__."/js/script_login.js"?></script>
   
 </body>
 

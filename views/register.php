@@ -1,7 +1,4 @@
-<?php include "partials/header.php"; ?>
-
-    <title>Register</title>
-</head>
+<?php include __DIR__."\partials\header.php"; ?>
 
 <body>
 
@@ -14,13 +11,13 @@
             <input id="id_input_pass2" type="text" name="name_pass2" placeholder="Potvrdit heslo">
             <button class="button--primary" type="submit">Vytvořit účet</button>
             <div class="form__footer">
-                <p>Již máte účet? <a href="index.php">Přihlaste se</a></p>
+                <p>Již máte účet? <a href="views/login.php">Přihlaste se</a></p>
             </div>
         </form>
         
     </main>
 
-    <script type="text/javascript" src="../js/script_register.js"></script>
+    <script type="text/javascript"><?php include __DIR__."/js/script_login.js"?></script>
 
 </body>
 

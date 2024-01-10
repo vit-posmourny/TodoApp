@@ -1,3 +1,4 @@
+
 let modal = document.querySelector(".modal-overlay");
 let btn_new_todo = document.getElementById("btn_new_todo");
 

@@ -1,13 +1,13 @@
 <?php
-    
+
     namespace app\controllers;
-    
+
     use Core\View;
-    
-    class dashboardControl
+
+    class loginController
     {
         public function index()
         {
-            return View::render('dashboard');
+            return View::render('loginView');
         }
     }

@@ -17,13 +17,13 @@
     
     <main  class="container--center">
 
-        <form id="id_login" action="../controllers/checkUserInDatabase.php" class="form" name="name_form" method="post">
+        <form id="id_login" action="" class="form" name="name_form" method="post">
             <h1 class="form__headline">Přihlásit se</h1>
             <input id="id_input_email" name="name_email" type="text" placeholder="Email">
             <input id="id_input_pass" name="name_pass" type="text" placeholder="Heslo">
             <button class="button--primary" type="submit">Přihlášení</button>
             <div class="form__footer">
-                <p>Nemáte účet? <a href="register.php">Vytvořte si ho</a></p>
+                <p>Nemáte účet? <a href="registerView.php">Vytvořte si ho</a></p>
             </div>
         </form>
         

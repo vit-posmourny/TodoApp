@@ -4,10 +4,10 @@
 
     use Core\View;
 
-    class loginControl
+    class registerController
     {
         public function index()
         {
-            return View::render('login');
+            return View::render('registerView');
         }
     }

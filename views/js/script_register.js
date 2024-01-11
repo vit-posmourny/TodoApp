@@ -19,12 +19,12 @@ function checkAllStates() {
 
     if (emailValidState && passValidState && pass2ValidState)
     {
-        register.action = "../controllers/checkUserInDatabase.php";
+        // register.action = "../controllers/checkUserInDatabase.php";
 
     } else {
 
         alert("Vyplňte prosím všechny údaje.");
-        register.action = "";
+        // register.action = "";
     }
 
 }

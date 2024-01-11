@@ -1,6 +1,5 @@
 let email = document.getElementById('id_input_email');
 let pass = document.getElementById('id_input_pass');
-let pass2 = document.getElementById('id_input_pass2');
 let login = document.getElementById('id_login');
 
 let emailValidState = false;
@@ -17,11 +16,11 @@ function checkAllStates() {
     
     if (emailValidState && passValidState)
     {
-        login.action = "../controllers/checkUserInDatabase.php";
+        // login.action = "../controllers/checkUserInDatabase.php";
 
     } else {
         
-        login.action = "";
+        // login.action = "";
     }
     
 }

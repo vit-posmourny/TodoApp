@@ -11,7 +11,7 @@
             <input id="id_input_pass2" type="text" name="name_pass2" placeholder="Potvrdit heslo">
             <button class="button--primary" type="submit">Vytvořit účet</button>
             <div class="form__footer">
-                <p>Již máte účet? <a href="views/login.php">Přihlaste se</a></p>
+                <p>Již máte účet? <a href="loginView.php">Přihlaste se</a></p>
             </div>
         </form>
         

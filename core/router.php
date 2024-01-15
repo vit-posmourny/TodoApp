@@ -5,11 +5,27 @@ namespace Core;
     class Router
     {
         private $routes = [];
-        
-        // Přidává novou trasu do routovacího systému
-        public function addRoute($url, $controller, $method)
+
+        // Přidává novou trasu do routovacího systému pro GET metodu
+        public function get($url, $controller, $callback)
         {
-            $this->routes[$url] = ['controller' => $controller, 'method' => $method];
+            $this->addRoute($url, $controller, $callback, "GET");
+        }
+
+        // Přidává novou trasu do routovacího systému pro POST metodu
+        public function post($url, $controller, $callback)
+        {
+            $this->addRoute($url, $controller, $callback, "POST");
+        }
+
+        // Přidává novou trasu do routovacího systému pro libovolné metody
+        public function addRoute($url, $controller, $callback, $http_method)
+        {
+            $this->routes[$http_method.$url] = [
+                'controller' => $controller,
+                'callback' => $callback,
+                'http_method' => $http_method
+            ];
             
         }
         
@@ -18,17 +34,16 @@ namespace Core;
         {
             // Ověření existence trasy pro dané URL
             if (array_key_exists($url, $this->routes)) {
-                $route = $this->routes[$url];
                 
                 // Získání názvu kontroleru a metody
-                $controllerName = $route['controller'];
-                $methodName = $route['method'];
+                $controllerName = $this->routes[$url]['controller'];
+                $callback = $this->routes[$url]['callback'];
                 
                 // Vytvoření instance kontroleru
-                $controller = new $controllerName();
+                $controllerInit = new $controllerName();
 
                 // $controller->$methodName();
-                $controller->index();
+                $controllerInit->callback($_POST ? $_POST : []);
                 
             } else {
                 

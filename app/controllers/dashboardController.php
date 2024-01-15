@@ -1,31 +1,43 @@
 <?php
     
-    namespace app\controllers;
-    
+    namespace App\controllers;
+
+    use App\Models\Todo;
     use Core\View;
     
     class dashboardController
     {
+
+
         public function index()
         {
-            $todos = [
-                [
-                    "Title" => "Nákup",
-                    "Description" => "Zajdi do obchodu pro máslo.",
-                    "done" => true
-                ],
-                [
-                    "Title" => "venčení",
-                    "Description" => "zajdi se psem, alespoň jednou kolem baráku.",
-                    "done" => false
-                ],
-                [
-                    "Title" => "Naučit lidi programovat.",
-                    "Description" => "Nauč je, jak se vytváří webové aplikace.",
-                    "done" => true
-                ],
-            ];
-            
-            return View::render('dashboardView', $todos);
+            $todo = new Todo();
+            $todos = $todo->all();
+
+            return View::render('dashboard.view', [
+                'todos'=> $this->todo->whereDone(0),
+                'todo_tab' => '--selected',
+                'done_tab' => '',
+                'title' => "Dashboard"
+            ]);
+        }
+
+
+        public function createNewTodo($data)
+        {
+            $this->todo->create($data);
+            return header('location: /TodoApp/');
+        }
+
+
+        public function done()
+        {
+
+            return View::render('dashboard.view', [
+                'todos'=> $this->todo->whereDone(0),
+                'todo_tab' => '--selected',
+                'done_tab' => '',
+                'title' => "Dashboard"
+            ]);
         }
     }

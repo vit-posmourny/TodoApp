@@ -4,9 +4,13 @@
     
     class View
     {
-        public static function render($viewName, $data)
+        public static function render($viewName, $data = null)
         {
-            $todos = $data;
+            foreach ($data ?? [] as $variable_name => $variable)
+            {
+                $variable_name = $variable_name;
+                $$variable_name = $variable;
+            }
             
             require_once "views/" . $viewName . ".php";
         }

@@ -1,6 +1,6 @@
 <?php
 
-    namespace app\controllers;
+    namespace App\controllers;
 
     use Core\View;
 
@@ -8,6 +8,17 @@
     {
         public function index()
         {
-            return View::render('loginView');
+            return View::render('login.view');
+        }
+
+
+        public function showLogin()
+        {
+
+        }
+
+        public function  loginUser()
+        {
+
         }
     }

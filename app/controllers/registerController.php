@@ -1,6 +1,6 @@
 <?php
 
-    namespace app\controllers;
+    namespace App\controllers;
 
     use Core\View;
 
@@ -8,6 +8,16 @@
     {
         public function index()
         {
-            return View::render('registerView');
+            return View::render('register.view');
+        }
+
+        public function showRegisterForm()
+        {
+
+        }
+
+        public function registerUser()
+        {
+
         }
     }

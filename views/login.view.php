@@ -23,7 +23,7 @@
             <input id="id_input_pass" name="name_pass" type="text" placeholder="Heslo">
             <button class="button--primary" type="submit">Přihlášení</button>
             <div class="form__footer">
-                <p>Nemáte účet? <a href="registerView.php">Vytvořte si ho</a></p>
+                <p>Nemáte účet? <a href="register.view.php">Vytvořte si ho</a></p>
             </div>
         </form>
         

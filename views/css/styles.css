@@ -115,6 +115,7 @@ input {
 }
 
 .todo__headline {
+    padding-top: 8px;
     font-size: 1.5rem;
     margin-bottom: 0;
     margin-top: 0;

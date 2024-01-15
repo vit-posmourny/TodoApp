@@ -1,4 +1,4 @@
-<?php include __DIR__."/partials/header.php"; ?>
+<?php Core\view::render('partials/header', ["title" => "Dashboard"]); ?>
 
 <body>
 
@@ -45,7 +45,7 @@
 
     <div class="modal-overlay">
         
-        <form action="./views/loginView.php" class="form" >
+        <form action="./views/login.view.php" class="form" >
             <h1 class="form__headline">Nový úkol</h1>
             <input id="todo_input" type="text">
             <input type="text">
